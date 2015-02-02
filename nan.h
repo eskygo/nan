@@ -1843,7 +1843,7 @@ namespace Nan {
 }
 
 NAN_INLINE v8::Local<v8::Value> NanEncode(
-    const void *buf, size_t len, enum Nan::Encoding encoding = Nan::BINARY) {
+    const char *buf, size_t len, enum Nan::Encoding encoding = Nan::BINARY) {
 #if (NODE_MODULE_VERSION > 0x000B)
   return node::Encode(
       v8::Isolate::GetCurrent()
